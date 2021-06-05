@@ -1,0 +1,149 @@
+html
+  head
+    title Hotel Booking
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    meta(name='keywords', content='Elite Hotel Booking Widget Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design')
+    script(type='application/x-javascript').
+      addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+    // font files
+    link(href='//fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900', rel='stylesheet', type='text/css')
+    link(href='//fonts.googleapis.com/css?family=Poiret+One', rel='stylesheet', type='text/css')
+    // //font files
+    // css files
+    link(href='css/bootstrap1.css', rel='stylesheet', type='text/css', media='all')        
+    link(href='css/styleh.css', rel='stylesheet', type='text/css', media='all')
+    // /css files
+    // js files
+    script(src='js/jquery.min1.js')
+    script(src='js/login.js')
+    script(type='text/javascript', src='js/move-top.js')
+    script(type='text/javascript', src='js/easing.js')
+    script(type='text/javascript').
+      jQuery(document).ready(function($) {
+      $(".scroll").click(function(event){
+      event.preventDefault();
+      $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+      });
+      });
+    // /js files
+  body
+    header(style="background:rgb(5, 4, 76);height:80px;")
+        .container-fluid
+            p(style="font-family:Lucida Calligraphy;font-size:24px;color:white;padding:20px").copyright
+              | Tour Info
+              a.pull-right( href='/hotel1' style="color:white") Logout
+     
+    .row
+      .col-md-6(style="margin:10px 20px;")
+        .header      
+          h1(style="font-weight:bold;color:black;margin-bottom:20px;") Review Your Room
+          |
+        each vr in sub  
+          .col-md-12  
+            img(src='/images/'+vr.img style="height:380px;max-width:440%;")    
+            br 
+            br
+            p(style="font-weight:bold;font-size:23px;color:orange")= vr.price
+            br
+            p(style="font-size:19px;font-weight:bold")=vr.name
+            p(style="font-size:16px")=vr.address
+            br
+            p(style="font-size:19px")="Facilities: "+vr.facilities   
+                           
+      .col-md-6(style="text-align:center;max-width:43%")
+        form(action="/book", method="post")
+          .header      
+            h1(style="font-weight:bold;color:black;margin-bottom:20px;") Hotel Booking
+            |         
+            .banner-top.col-md-12(style="margin-left:50px;width:90%")
+                h2 Book Your Room Today
+                | &#x9;&#x9;&#x9;&#x9;
+                .banner-bottom
+                  .bnr-one
+                    .bnr-left
+                      p Email
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .bnr-right
+                      input#email(type='text', name='email', required='')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .clearfix
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;
+                  .bnr-one
+                    .bnr-left
+                      p Check In Date
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .bnr-right
+                      input#datepicker.date(type='text', value='',name="checkin", onfocus="this.value = '';", onblur="if (this.value == '') {this.value = '';}", required='')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .clearfix
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;
+                  .bnr-one
+                    .bnr-left
+                      p Check Out Date
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .bnr-right
+                      input#datepicker1.date(type='text', value='',name="checkout", onfocus="this.value = '';", onblur="if (this.value == '') {this.value = '';}", required='')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .clearfix
+                  | &#x9;&#x9;&#x9;&#x9;&#x9; 
+                  .bnr-one
+                    .bnr-left
+                      p Adults
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .bnr-right
+                      input#adults(type='text', name='adults', required='')
+                    .clearfix
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;
+                  .bnr-one
+                    .bnr-left
+                      p Children
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .bnr-right
+                      input#children(type='text', name='children', required='')
+                    .clearfix
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;
+                  .bnr-one
+                    .bnr-left
+                      p Contact No.
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .bnr-right
+                      input#contact(type='text', name='contact', required='')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .clearfix
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;
+                  .bnr-one
+                    .bnr-left
+                      p Payment
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .bnr-right
+                      input#pay(type='text', value='Pay At Hotel',disabled='', required='')
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .clearfix
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;
+                  .bnr-btn
+                    form
+                      button#booknow(type='button') Book Now
+                  br  
+                  p(style="color:white") Your booking details will be sent to this email & mobile number.  
+      // -start-date-piker--
+      link(rel='stylesheet', href='css/jquery-ui.css')
+      | &#x9;&#x9;
+      script(src='js/jquery-ui.js')
+      | &#x9;&#x9;&#x9;
+      script.
+        history.pushState(null, null, location.href);
+          window.onpopstate = function () {
+            history.go(1);
+          };
+      script.
+        $(function() {
+        $( "#datepicker,#datepicker1" ).datepicker();
+        });
+      // -/End-date-piker--
+    footer.footer(style="background:#2C2E3E;height:60px;font-size:20px; ")
+      .container-fluid
+        p.copyright.pull-center(style="margin-top:15px;")
+          | Copyright ©2018 All rights reserved 
+              
+    

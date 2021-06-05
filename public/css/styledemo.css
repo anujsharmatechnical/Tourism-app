@@ -1,0 +1,25 @@
+
+.bnr-btn {
+	margin: 5% auto 0;
+}
+.bnr-btn input[type=submit]{
+	color: #fff;
+	padding: 7px 25px;
+	font-size: 20px;
+	cursor: pointer;
+	font-weight: 600;
+	width:100%;
+	border: none;
+	font-family: 'Poiret One', cursive;
+	background:#fdbb30;
+	outline: none;
+	transition:all 0.5s ease-in-out;
+	-webkit-transition:all 0.5s ease-in-out;
+	-moz-transition:all 0.5s ease-in-out;
+	-o-transition:all 0.5s ease-in-out;
+}
+/*-- AgileITS --*/
+.bnr-btn input[type=submit]:hover{
+	background: #E09E13;
+	color:#fff;	
+}

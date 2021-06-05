@@ -1,0 +1,141 @@
+doctype html(lang='en')
+head
+    meta(charset='utf-8')
+    | &#x9;
+    link(rel='icon', type='image/png', href='assets/img/favicon.ico')
+    | &#x9;
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    | &#x9;
+    title Admin Panel
+    | &#x9;
+    meta(content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0', name='viewport')
+    |     
+    meta(name='viewport', content='width=device-width')
+    // Bootstrap core CSS
+    link(href='assets/css/bootstrap.min.css', rel='stylesheet')
+    // Animation library for notifications
+    link(href='assets/css/animate.min.css', rel='stylesheet')
+    // Light Bootstrap Table core CSS
+    link(href='assets/css/light-bootstrap-dashboard.css?v=1.4.0', rel='stylesheet')
+    // Fonts and icons
+    link(href='http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css', rel='stylesheet')
+    |     
+    link(href='http://fonts.googleapis.com/css?family=Roboto:400,700,300', rel='stylesheet', type='text/css')
+    |     
+    link(href='assets/css/pe-icon-7-stroke.css', rel='stylesheet')
+body
+    .wrapper
+      .sidebar(data-color='purple', data-image='assets/img/sidebar-5.jpg')
+        // you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple"
+        .sidebar-wrapper
+          .logo
+            a.simple-text(href='http://www.creative-tim.com')
+              | Welcome
+          |             
+          ul.nav      
+            li.active
+              a(href='/user')
+                i.fa.fa-user
+                |                         
+                p Admin Profile
+            |                 
+            li
+              a(href='/table')
+                i.fa.fa-list-ul
+                |                         
+                p Users List
+            |    
+            li
+              a(href='/addSubDes')
+                i.fa.fa-plus
+                |                         
+                p Add Sub-Destinations
+            |                
+            li
+              a(href='/addAdventures')
+                i.fa.fa-plus-square
+                |                         
+                p Add Adventures
+            |                 
+            li
+              a(href='/addHotels')
+                i.fa.fa-home
+                |                         
+                p Add Hotels
+            |
+            li
+              a(href='/delFeedback')
+                i.fa.fa-list-alt
+                |                         
+                p Feedback List
+            |                      
+      |     
+      .main-panel
+        nav.navbar.navbar-default.navbar-fixed
+          .container-fluid
+            .navbar-header
+              button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navigation-example-2')
+                span.sr-only Toggle navigation
+                |                         
+                span.icon-bar
+                |                         
+                span.icon-bar
+                |                         
+                span.icon-bar
+              |                   
+              a.navbar-brand(href='#') Admin
+            |                 
+            .collapse.navbar-collapse
+              ul.nav.navbar-nav.navbar-right
+                
+                li
+                  a(href='/adminLogin')
+                    p Log out
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                li.separator.hidden-lg.hidden-md
+        |         
+        .content
+          .container-fluid
+                .row
+                .col-md-12
+  
+                    .header
+                        h4.title Feedback List
+                        |                                                   
+                    .content.table-responsive.table-full-width
+                            table.table.table-hover.table-striped
+                                tr
+                                    th First Name
+                                    th Last Name
+                                    th Email
+                                    th Subject                       
+                                    th Message
+                                    th Delete
+                                each vr in feedback                                    
+                                    tr
+                                        td=vr.fname
+                                        td=vr.lname
+                                        td=vr.email
+                                        td=vr.subject
+                                        td=vr.message
+                                        td 
+                                            a(href="/delFeedback1?id="+vr._id)
+                                                i.pe-7s-trash
+                                       
+        footer.footer
+          .container-fluid    
+            p.copyright.pull-right
+                | Copyright ©2018 All rights reserved 
+    // Core JS Files
+    script(src='assets/js/jquery.3.2.1.min.js', type='text/javascript')
+    | &#x9;
+    script(src='assets/js/bootstrap.min.js', type='text/javascript')
+    // Charts Plugin
+    script(src='assets/js/chartist.min.js')
+    // Notifications Plugin
+    script(src='assets/js/bootstrap-notify.js')
+    // Google Maps Plugin
+    script(type='text/javascript', src='https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE')
+    // Light Bootstrap Table Core javascript and methods for Demo purpose
+    script(src='assets/js/light-bootstrap-dashboard.js?v=1.4.0')
+    

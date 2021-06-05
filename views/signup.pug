@@ -1,0 +1,101 @@
+doctype html
+//
+a(href="/home" style="color:white;font-size:20px;") Home
+html
+  head
+    title Signup Form
+    // custom-theme
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    meta(name='keywords', content='Simple Login and Signup Form web template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login sign up Responsive web template, SmartPhone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design')
+    script(type='application/x-javascript').
+      addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+      function hideURLbar(){ window.scrollTo(0,1); }
+    // //custom-theme
+    link(href='css/stylelog.css', rel='stylesheet', type='text/css', media='all')
+    link(href='css/bootstrap.css', rel='stylesheet')
+    // js
+    script(src='js/jquery-1.9.1.min.js')
+    // // js
+    //script(src='js/neww.js')
+    link(rel='stylesheet', type='text/css', href='css/easy-responsive-tabs.css ')
+    |  
+    link(href='//fonts.googleapis.com/css?family=Questrial', rel='stylesheet')
+  body.bg.agileinfo
+    h1.agile_head.text-center  Signup  Here
+    |    
+    .w3layouts_main.wrap(style="width:30%")
+      // Horizontal Tab
+      #parentHorizontalTab_agile
+        ul.resp-tabs-list.hor_1
+          li Signup
+          |                           
+        .agile_its_registration(style="width:90%;")
+            form.agile_form(action="/signup1" method="post")
+              p Username
+              | &#x9;&#x9;&#x9;&#x9;&#x9;  
+              input(type='text', name='username', required='required')
+              | &#x9;&#x9;&#x9;&#x9;&#x9;  
+              p Email
+              | &#x9;&#x9;&#x9;&#x9;&#x9;  
+              input(type='email',id='email1' name='email1', required='required')
+              | &#x9;&#x9;&#x9;&#x9;&#x9;  
+              div#warn.warn(style="color:white;font-size:18;text-align:right;")
+              | &#x9;&#x9;&#x9;&#x9;&#x9;
+              p Password
+              | &#x9;&#x9;&#x9;&#x9;&#x9;  
+              input#password1(type='password', name='password1', required='required')
+              | &#x9;&#x9;&#x9;&#x9;&#x9;  
+              p Confirm Password
+              | &#x9;&#x9;&#x9;&#x9;&#x9;  
+              input#confirm_password(type='password', name='confirm_password', required='required')
+              | &#x9;&#x9;&#x9;&#x9; 
+              p Contact No.
+              | &#x9;&#x9;&#x9;&#x9;&#x9;  
+              input#mobile(type='text', name='mobile', required='required')
+              | &#x9;&#x9;&#x9;&#x9; 
+              p City
+              | &#x9;&#x9;&#x9;&#x9;&#x9;  
+              input#city(type='text', name='city', required='required')
+              | &#x9;&#x9;&#x9;&#x9;&#x9;  
+              input(type='submit', value='Signup')
+              | &#x9;&#x9;&#x9;&#x9;&#x9;   
+              input(type='reset', value='Reset')
+             
+      // //Horizontal Tab
+    | &#x9;
+   
+    // tabs
+    script(src='javascripts/easyResponsiveTabs.js')
+    script(type='text/javascript').
+      $(document).ready(function() {
+      //Horizontal Tab
+      $('#parentHorizontalTab_agile').easyResponsiveTabs({
+      type: 'default', //Types: default, vertical, accordion
+      width: 'auto', //auto or any width like 600px
+      fit: true, // 100% fit in a container
+      tabidentify: 'hor_1', // The tab groups identifier
+      activate: function(event) { // Callback function if tab is switched
+      var $tab = $(this);
+      var $info = $('#nested-tabInfo');
+      var $name = $('span', $info);
+      $name.text($tab.text());
+      $info.show();
+      }
+      });
+      });
+    script(type='text/javascript').
+      window.onload = function () {
+      document.getElementById("password1").onchange = validatePassword;
+      document.getElementById("confirm_password").onchange = validatePassword;
+      }
+      function validatePassword(){
+      var pass2=document.getElementById("confirm_password").value;
+      var pass1=document.getElementById("password1").value;
+      if(pass1!=pass2)
+      document.getElementById("confirm_password").setCustomValidity("Passwords Don't Match");
+      else
+      document.getElementById("confirm_password").setCustomValidity('');
+      //empty string means no validation error
+      }
+    // //tabs

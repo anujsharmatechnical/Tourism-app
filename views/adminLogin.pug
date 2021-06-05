@@ -1,0 +1,58 @@
+doctype html
+html
+  head
+    title Admin Login
+    // custom-theme
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    meta(name='keywords', content='Simple Login and Signup Form web template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login sign up Responsive web template, SmartPhone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design')
+    script(type='application/x-javascript').
+      addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+      function hideURLbar(){ window.scrollTo(0,1); }
+    // //custom-theme
+    link(href='css/stylelog.css', rel='stylesheet', type='text/css', media='all')
+    link(href='css/bootstrap.css', rel='stylesheet')
+    // js
+    script(src='js/jquery-1.9.1.min.js')
+    // // js
+    script(src='js/login.js')
+    
+    link(rel='stylesheet', type='text/css', href='stylesheets/easy-responsive-tabs.css ')
+    |  
+    link(href='//fonts.googleapis.com/css?family=Questrial', rel='stylesheet')
+  body.bg.agileinfo
+    h1.agile_head.text-center   Login Here
+    |    
+    .w3layouts_main.wrap
+      // Horizontal Tab
+      #parentHorizontalTab_agile
+        ul.resp-tabs-list.hor_1
+          li(style="Font-size:25px;color:white;font-weight:bold;") LogIn
+          |                        
+        .resp-tabs-container.hor_1
+          .w3_agile_login
+            form.agile_form(method="post")
+              p(style="Font-size:18px;") Email
+              | &#x9;&#x9;&#x9;&#x9;&#x9;  
+              input(type='email', name='email',id="email1", required='required')
+              | &#x9;&#x9;&#x9;&#x9;&#x9;  
+              p(style="Font-size:18px;") Password
+              | &#x9;&#x9;&#x9;&#x9;&#x9;  
+              input.password(type='password', name='password',id="pwd1" required='required')
+              | &#x9;&#x9;&#x9;&#x9;&#x9; 
+              input(style="display:none")(name='id' id="id" value=id  required='required')
+              |  
+              | &#x9;&#x9;&#x9;&#x9;&#x9;  
+              br
+              br
+              button#adminlogin.btn.btn-info(type='button') Submit
+            | &#x9;&#x9;&#x9;&#x9;&#x9; 
+
+    script(src='javascripts/easyResponsiveTabs.js')
+    script.
+        history.pushState(null, null, location.href);
+          window.onpopstate = function () {
+            history.go(1);
+          };    
+                       
+          
