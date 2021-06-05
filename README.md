@@ -1,5 +1,5 @@
-# Tourisum-app
-Tourisum app
+# Tourism-app
+Tourism app
 To start the application on local follow these steps -:
 Go to the project directory
 #npm install
