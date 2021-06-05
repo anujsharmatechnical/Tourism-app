@@ -1,2 +1,2 @@
-# Tourisum-app
-Tourisum app
+# Tourism-app
+Tourism app
